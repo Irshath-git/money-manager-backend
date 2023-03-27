@@ -1,10 +1,11 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const mongoose = require("mongoose");
 
 require("dotenv").config({ path: "./config.env" });
-
-const port = process.env.PORT || 4000;
+mongoose.set("strictQuery", false);
+const port = process.env.PORT || 5000;
 
 //using middlewares
 app.use(cors());
